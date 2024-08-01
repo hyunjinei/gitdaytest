@@ -12,7 +12,7 @@ class SeedSelection:
 
     def select(self, population):
         # male: 가장 적합한 염색체
-        male = min(population, key=lambda ind: ind.fitness)
+        male = max(population, key=lambda ind: ind.fitness)
         # female: 랜덤하게 선택
         female = random.choice(population)
         # 확률 k에 따라 male 또는 female 선택
